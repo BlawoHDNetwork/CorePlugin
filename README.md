@@ -1,2 +1,2 @@
-# core
-CorePlugin
+# DreambuildCore
+CorePlugin von Dreambuild
