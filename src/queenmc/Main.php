@@ -1,6 +1,7 @@
 <?php
 //Danke an BlawoHD fuer deine Hilfe! :D
 namespace queenmc;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\command\Command;
@@ -12,39 +13,38 @@ use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 use pocketmine\permission\ServerOperator;
+
 class Main extends PluginBase{
 //Loading
 public function onLoad(){
-$this->getLogger()->info("§l§eDreambuildCore -> Loading");
+	$this->getLogger()->info("§l§eDreambuildCore -> Loading");
 }
 //ENABLE
 public function onEnable(){
-$this->getLogger()->info("§l§aDreambuildCore -> Enabled");
+	$this->getLogger()->info("§l§aDreambuildCore -> Enabled");
 }   
 //DISABLE
 public function onDisable(){
-$this->getLogger()->info("§l§cDreambuildCore -> Disabled");
+	$this->getLogger()->info("§l§cDreambuildCore -> Disabled");
 }
 //COMMANDS
 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args)
 {
 //INFO COMMAND
-switch ($cmd->getName())
-{
-			case "kontakt":
-			    if($sender->hasPermission("db")) {
-					$sender->sendMessage(TextFormat::RED . "=============================================================");
-					$sender->sendMessage(TextFormat::GOLD . "§l§cKontaktiere uns!");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aWebsite §f[§7 web.dreambuild.de §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aKiK §f[§7 _xXNKAXx_ §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aInstagram §f[§7 dreambuild.de §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aTwitter §f[§7 dreambuild_de §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aEmail §f[§7 dreambuild@web.de §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aSkype §f[§7 xXNKAXx §f]");
-                                        $sender->sendMessage(TextFormat::GOLD . "-> §aTS und/oder Discord §f[§7 Benutze: /info vchat §f]");
-					$sender->sendMessage(TextFormat::RED . "=============================================================");
-                                        return true;
-                            }
+	switch ($cmd->getName);
+	if($sender->hasPermission("db")) {
+		$sender->sendMessage(TextFormat::RED . "=============================================================");
+		$sender->sendMessage(TextFormat::GOLD . "§l§cKontaktiere uns!");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aWebsite §f[§7 web.dreambuild.de §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aKiK §f[§7 _xXNKAXx_ §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aInstagram §f[§7 dreambuild.de §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aTwitter §f[§7 dreambuild_de §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aEmail §f[§7 dreambuild@web.de §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aSkype §f[§7 xXNKAXx §f]");
+                $sender->sendMessage(TextFormat::GOLD . "-> §aTS und/oder Discord §f[§7 Benutze: /info vchat §f]");
+		$sender->sendMessage(TextFormat::RED . "=============================================================");
+                return true;
+	}
 //VoiceServerCOMMAND
 			case "ts":
 			    if($sender->hasPermission("db")) {
