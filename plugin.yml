@@ -1,0 +1,27 @@
+name: DreamCore
+main: queenmc\Main
+version: 2.0
+api: [1.0.0]
+load: POSTWORLD
+author: QueenMC
+description: DreambuildCore by QueenMC.
+commands:
+ kontakt:
+  description: §aKontaktiere uns!
+  usage: "/dream."
+  permission: db
+ ts:
+  description: §aVoiceServer!
+  usage: "/ts."
+  permission: db
+ team:
+  description: §aInformationen zur Bewerbung
+  usage: "/team."
+  permission: db
+ info:
+  description: §aInformationen und Hilfe
+  usage: "/info <web/vchat/vote/premium/partner/vip/vip+>."
+permissions:
+ db:
+  dedault: true
+
