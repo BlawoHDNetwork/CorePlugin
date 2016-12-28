@@ -23,5 +23,5 @@ commands:
   usage: "/info <web/vchat/vote/premium/partner/vip/vip+>."
 permissions:
  db:
-  dedault: true
+  default: true
 
